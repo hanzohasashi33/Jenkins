@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import unittest
-from unittest.main import main
 
 from main import divisible
 
@@ -11,6 +10,9 @@ class TestSort(unittest.TestCase):
 
     def test_notdivisible(self):
         self.assertEqual(divisible(4,3), False)
+
+    def test_divisiblebyzero(self):
+        self.assertEqual(divisible(4,0), "Division by zero not permitted")
 
 
 
